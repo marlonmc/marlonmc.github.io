@@ -5,6 +5,27 @@ body{overflow-x:hidden;font-family:"Roboto Slab","Helvetica Neue",Helvetica,Aria
     height: 50px;
     width: auto;
 }
+#hand-img {
+    width: 25%;
+    animation: roll 2s infinite;
+    transform: rotate(30deg);
+}
+header:active {
+    background-image: url(/img/hand.jpg);
+    background-size: cover;
+    opacity: 1.0;
+}
+@keyframes roll {
+    0% {
+        transform: rotate(20deg);
+    }
+    50% {
+        transform: rotate(-20deg);
+    }
+    100% {
+        transform: rotate(20deg)
+    }
+}
 .video-container {
     position: relative;
     padding-bottom: 56.25%;
