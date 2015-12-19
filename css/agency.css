@@ -82,8 +82,9 @@ header:active {
     list-style: square;
 }
 #events ul li a{
-    color: #000000;
-    font-size: 1.3em;
+    color: #00f5ff;
+    font-size: 1.5em;
+    text-shadow: 2px 2px 2px #000000;
     padding: 5px;
     margin: 5px;
     background-color: #ce00ff;
@@ -115,6 +116,16 @@ header:active {
     width: 300px;
     border: 2px solid grey;
 }
+img.personality {
+    height: 350px;
+    width: auto;
+    margin: 9px;
+}
+img.flyers {
+    height: 300px;
+    width: auto;
+    margin: 9px;
+}
 .btn {
     margin: 20px;
 }
@@ -139,7 +150,15 @@ p.large{font-size:16px}a,a:hover,a:focus,a:active,a.active{outline:0}a{color:#fe
 #listContainer a { color: #ffffff; font-size: 1.2em; padding: 0px; margin: 0px;}
 #listContainer img { margin: auto }
 
-#playerContainer { width:100%; height:100%; background-color:#333333; padding: 5px; margin-top: 10px}
+li#spacer {
+    width: 99.8%;
+    height: 2px;
+    margin:auto;
+    list-style-type: none;
+    background-color:#ffff00;
+}
+
+#playerContainer, #playerContainer2 { width:100%; height:100%; background-color:#333333; padding: 5px; margin-top: 10px}
 .controls .btn { display:inline-block; width:50px; text-align:center; padding: 10px; font-size: 1.8em;}
 
 .audioDetails { width:100%; height:40px; z-index: 100; color: #d6ecff; font-size: 1.5em;}

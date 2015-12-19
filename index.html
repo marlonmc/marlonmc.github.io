@@ -16,6 +16,9 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     
+    <!-- Slick Photo carousel -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css"/>
+
     <!-- Custom CSS -->
     <link href="css/agency.css" rel="stylesheet">
 
@@ -93,18 +96,18 @@
             <div class="row">
                 <div class="col-md-12 col- col-lg-12">
                     <ul class="list-inline social-buttons">
-                        <li><a href="https://twitter.com/highfivehiphop?lang=en"><i class="fa fa-twitter"></i></a>
+                        <li><a target="_blank" href="https://twitter.com/highfivehiphop?lang=en"><i class="fa fa-twitter"></i></a>
                         </li>
-                        <li><a href="https://www.facebook.com/highfivehiphop/"><i class="fa fa-facebook"></i></a>
+                        <li><a target="_blank" href="https://www.facebook.com/highfivehiphop/"><i class="fa fa-facebook"></i></a>
                         </li>
-                        <li><a href="https://www.instagram.com/highfivehiphop/"><i class="fa fa-instagram"></i></a>
+                        <li><a target="_blank" href="https://www.instagram.com/highfivehiphop/"><i class="fa fa-instagram"></i></a>
                         </li>
-                        <li><a href="https://www.youtube.com/user/highfivehiphop"><i class="fa fa-youtube"></i></a>
+                        <li><a target="_blank" href="https://www.youtube.com/user/highfivehiphop"><i class="fa fa-youtube"></i></a>
                         </li>
-                        <li><a href="https://vine.co/u/1087147050086309888"><i class="fa fa-vine"></i></a>
+                        <li><a target="_blank" href="https://vine.co/u/1087147050086309888"><i class="fa fa-vine"></i></a>
                         </li>
                         </li>
-                        <li><a href="https://soundcloud.com/highfivehiphop"><i class="fa fa-soundcloud"></i></a>
+                        <li><a target="_blank" href="https://soundcloud.com/highfivehiphop"><i class="fa fa-soundcloud"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -125,6 +128,58 @@
                         <div id="listContainer" class="playlistContainer">
                             <img class="img-responsive" src="img/logos/radio.jpg" />
                             <div id="playListContainer">
+                                <li class="btn music-btn" data-src="/music/01_Turn_It_Up.mp3">
+                                    <a href="#">Turn It Up</a>
+                                </li>
+                                <li class="btn music-btn" data-src="/music/02_I_Got_It.mp3">
+                                    <a href="#">I Got It</a>
+                                </li>
+                                <li class="btn music-btn" data-src="/music/03_Put_'Em_Up.mp3">
+                                    <a href="#">Put 'Em Up</a>
+                                </li>
+                                <li class="btn music-btn" data-src="/music/04_Janky_Promoters.mp3">
+                                    <a href="#">Janky Promoters</a>
+                                </li>
+                                <li class="btn music-btn" data-src="/music/05_90's_Song.mp3">
+                                    <a href="#">90's Song</a>
+                                </li>
+                                <li class="btn music-btn" data-src="/music/06_Ode_to_DH.mp3">
+                                    <a href="#">Ode to DH</a>
+                                </li>
+                                <li class="btn music-btn" data-src="/music/07_Moonstoned.mp3">
+                                    <a href="#">Moonstoned</a>
+                                </li>
+                                <li class="btn music-btn" data-src="/music/08_Rich_Girl.mp3">
+                                    <a href="#">Rich Girl</a>
+                                </li>
+                                <li class="btn music-btn" data-src="/music/09_Livin'_Like_This.mp3">
+                                    <a href="#">Livin' Like This</a>
+                                </li>
+                                <li class="btn music-btn" data-src="/music/10_High_Five.mp3">
+                                    <a href="#">High Five</a>
+                                </li>
+                                
+                                <div id="playerContainer">
+                                    <div class="controls">
+                                        <button class="btn shuffle shuffleActive fa fa-random" data-attr="shuffled"></button>
+                                        <button class="btn left fa fa-backward" data-attr="prevAudio"></button>
+                                        <button class="btn play fa fa-play" data-attr="playPauseAudio"></button>
+                                        <button class="btn right fa fa-forward" data-attr="nextAudio"></button>
+                                        <button class="btn repeat fa fa-refresh" data-attr="repeatSong"></button>
+                                    </div>
+                                    <div class="audioDetails">
+                                        <span class="songPlay"></span>
+                                        <span data-attr="timer" class="audioTime"></span>
+                                    </div>
+
+                                    <div class="progress">
+                                        <div data-attr="seekableTrack" class="seekableTrack"></div>
+                                        <div class="updateProgress"></div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Audio player for Masters of Maintenance -->
+                                <img class="img-responsive" src="img/logos/master.jpg" />
                                 <li class="btn music-btn" data-src="/music/Masters_of_Maintenance-01_Intro.mp3">
                                     <a href="#">Intro</a>
                                 </li>
@@ -151,93 +206,41 @@
                                 </li>
                             </div>
                         </div>
-                        <div id="playerContainer">
-                            <div class="controls">
-                                <button class="btn shuffle shuffleActive fa fa-random" data-attr="shuffled"></button>
-                                <button class="btn left fa fa-backward" data-attr="prevAudio"></button>
-                                <button class="btn play fa fa-play" data-attr="playPauseAudio"></button>
-                                <button class="btn right fa fa-forward" data-attr="nextAudio"></button>
-                                <button class="btn repeat fa fa-refresh" data-attr="repeatSong"></button>
-                            </div>
-                            <div class="audioDetails">
-                                <span class="songPlay"></span>
-                                <span data-attr="timer" class="audioTime"></span>
-                            </div>
-
-                            <div class="progress">
-                                <div data-attr="seekableTrack" class="seekableTrack"></div>
-                                <div class="updateProgress"></div>
-                            </div>
-<!--
-                            <div class="volumeControl">
-                                <div class="volume volume1"></div>
-                                <input class="bar" data-attr="rangeVolume" type="range" min="0" max="1" step="0.1" value="1" />
-                            </div>
--->
-                        </div>
-
                     </div>
-                    
-                    <!-- Audio player for Masters of Maintenance -->
-                    <div id="music2" class="containerPlayer shadow col-lg-4 col-md-4 col-sm-6 col-xs-12 ">
-                        <div id="listContainer" class="playlistContainer">
-                            <img class="img-responsive" src="img/logos/master.jpg" />
-                            <div id="playListContainer">
-                                <li class="btn music-btn" data-src="/music/Masters_of_Maintenance-01_Intro.mp3">
-                                    <a href="#">Intro</a>
-                                </li>
-                                <li class="btn music-btn" data-src="/music/Masters_of_Maintenance-02_Who's_Rhyming.mp3">
-                                    <a href="#">Who's Rhyming</a>
-                                </li>
-                                <li class="btn music-btn" data-src="/music/Masters_of_Maintenance-03_Thousand_Years.mp3">
-                                    <a href="#">Thousand Years</a>
-                                </li>
-                                <li class="btn music-btn" data-src="/music/Masters_of_Maintenance-04_Fool_For_You_(Interlude).mp3">
-                                    <a href="#">Fool For You (Interlude)</a>
-                                </li>
-                                <li class="btn music-btn" data-src="/music/Masters_of_Maintenance-05_Royalty.mp3">
-                                    <a href="#">Royalty</a>
-                                </li>
-                                <li class="btn music-btn" data-src="/music/Masters_of_Maintenance-06_Heaters_Like_This.mp3">
-                                    <a href="#">Heaters Like This</a>
-                                </li>
-                                <li class="btn music-btn" data-src="/music/Masters_of_Maintenance-07_Magnatize.mp3">
-                                    <a href="#">Magnatize</a>
-                                </li>
-                                <li class="btn music-btn" data-src="/music/Masters_of_Maintenance-08_Outro.mp3">
-                                    <a href="#">Outro</a>
-                                </li>
-                            </div>
-                        </div>
-                        <div id="playerContainer">
-                            <div class="controls">
-                                <button class="btn shuffle shuffleActive fa fa-random" data-attr="shuffled"></button>
-                                <button class="btn left fa fa-backward" data-attr="prevAudio"></button>
-                                <button class="btn play fa fa-play" data-attr="playPauseAudio"></button>
-                                <button class="btn right fa fa-forward" data-attr="nextAudio"></button>
-                                <button class="btn repeat fa fa-refresh" data-attr="repeatSong"></button>
-                            </div>
-                            <div class="audioDetails">
-                                <span class="songPlay"></span>
-                                <span data-attr="timer" class="audioTime"></span>
-                            </div>
-                            <div class="progress">
-                                <div data-attr="seekableTrack" class="seekableTrack"></div>
-                                <div class="updateProgress"></div>
-                            </div>
-<!--
-                            <div class="volumeControl">
-                                <div class="volume volume1"></div>
-                                <input class="bar" data-attr="rangeVolume" type="range" min="0" max="1" step="0.1" value="1" />
-                            </div>
--->
-                        </div>
 
-                    </div>
-                    
-                    <div class="col-md-12 col-xs-12" style="">
-                        <img class="img-responsive shadow" style="margin:auto;" src="img/portfolio/music1.jpg" />
-                    </div>
+                    <!-- Slick photo carousel; flyers -->
+                <div class="slickPersonal">
+                    <img class="personality" src="img/portfolio/1-min.jpg"/>
+                    <img class="personality" src="img/portfolio/2-min.jpg"/>
+                    <img class="personality" src="img/portfolio/3-min.jpg"/>
+                    <img class="personality" src="img/portfolio/4-min.jpg"/>
+                    <img class="personality" src="img/portfolio/5-min.jpg"/>
+                    <img class="personality" src="img/portfolio/6-min.jpg"/>
+                    <img class="personality" src="img/portfolio/7-min.jpg"/>
+                    <img class="personality" src="img/portfolio/8-min.jpg"/>
+                    <img class="personality" src="img/portfolio/9-min.jpg"/>
+                    <img class="personality" src="img/portfolio/10-min.jpg"/>
+                    <img class="personality" src="img/portfolio/11-min.jpg"/>
+                    <img class="personality" src="img/portfolio/12-min.jpg"/>
+                    <img class="personality" src="img/portfolio/13-min.jpg"/>
+                    <img class="personality" src="img/portfolio/14-min.jpg"/>
+                    <img class="personality" src="img/portfolio/15-min.jpg"/>
+                    <img class="personality" src="img/portfolio/16-min.jpg"/>
+                    <img class="personality" src="img/portfolio/17-min.jpg"/>
+                    <img class="personality" src="img/portfolio/18-min.jpg"/>
+                    <img class="personality" src="img/portfolio/19-min.jpg"/>
+                    <img class="personality" src="img/portfolio/20-min.jpg"/>
+                    <img class="personality" src="img/portfolio/21-min.jpg"/>
+                    <img class="personality" src="img/portfolio/22-min.jpg"/>
+                    <img class="personality" src="img/portfolio/23-min.jpg"/>
+                    <img class="personality" src="img/portfolio/24-min.jpg"/>
+                    <img class="personality" src="img/portfolio/25-min.jpg"/>
+                    <img class="personality" src="img/portfolio/26-min.jpg"/>
+                    <img class="personality" src="img/portfolio/27-min.jpg"/>
+                    <img class="personality" src="img/portfolio/28-min.jpg"/>
+                    <img class="personality" src="img/portfolio/29-min.jpg"/>
+                    <img class="personality" src="img/portfolio/30-min.jpg"/>
+                </div>
                 </div>
             </div>
         </div>
@@ -253,22 +256,30 @@
                 </div>
                 <div class="col-lg-12">
                     <ul class="">
-                        <li><a href="#">01 Jan 2016 - Madison Sq Garden</a>
-                        </li>
-                        <li><a href="#">15 Jan 2016 - Sports Authority Field</a>
-                        </li>
-                        <li><a href=""></a>
-                        </li>
-                        <li><a href=""></a>
-                        </li>
-                        <li><a href=""></a>
-                        </li>
-                        <li><a href=""></a>
-                        </li>
-                        <li><a href=""></a>
+                        <li><a target="_blank" href="https://goo.gl/maps/Ui6zubf2K542">Saturday, 02 Jan 2016 - Armoury, Denver</a>
                         </li>
                     </ul>
                 </div>
+                
+                <!-- Slick photo carousel; flyers -->
+                <div class="photoCarousel">
+                    <img class="flyers" src="img/portfolio/flyers/10-min.jpg"/>
+                    <img class="flyers" src="img/portfolio/flyers/11-min.jpg"/>
+                    <img class="flyers" src="img/portfolio/flyers/9-min.jpg"/>
+                    <img class="flyers" src="img/portfolio/flyers/1-min.jpg"/>
+                    <img class="flyers" src="img/portfolio/flyers/2-min.jpg"/>
+                    <img class="flyers" src="img/portfolio/flyers/4-min.jpg"/>
+                    <img class="flyers" src="img/portfolio/flyers/5-min.png"/>
+                    <img class="flyers" src="img/portfolio/flyers/6-min.jpg"/>
+                    <img class="flyers" src="img/portfolio/flyers/7.jpg"/>
+                    <img class="flyers" src="img/portfolio/flyers/8-min.jpg"/>
+                    <img class="flyers" src="img/portfolio/flyers/12-min.jpg"/>
+                    <img class="flyers" src="img/portfolio/flyers/13-min.jpg"/>
+                    <img class="flyers" src="img/portfolio/flyers/14-min.jpg"/>
+                    <img class="flyers" src="img/portfolio/flyers/15-min.jpg"/>
+                    <img class="flyers" src="img/portfolio/flyers/16-min.png"/>
+                </div>
+
             </div>
         </div>
     </section>
@@ -284,21 +295,21 @@
             </div>
             <div class="row">
                 <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#" class="portfolio-link" data-toggle="modal">
+                    <a href="#" class="portfolio-link">
                         <div class="video-container">
                             <iframe src="https://www.youtube.com/embed/crj3XrK23KU" frameborder="0" allowfullscreen></iframe>
                         </div>
                     </a>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#" class="portfolio-link" data-toggle="modal">
+                    <a href="#" class="portfolio-link">
                         <div class="video-container">
                             <iframe src="https://www.youtube.com/embed/RSsTPtt0riA" frameborder="0" allowfullscreen></iframe>
                         </div>
                     </a>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#" class="portfolio-link" data-toggle="modal">
+                    <a href="#" class="portfolio-link">
                         <div class="video-container">
                             <iframe src="https://www.youtube.com/embed/QHGHngDDExY" frameborder="0" allowfullscreen></iframe>
                         </div>
@@ -319,7 +330,7 @@
                     </a>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#" class="portfolio-link" data-toggle="modal">
+                    <a href="#" class="portfolio-link">
                         <div class="video-container">
                             <iframe src="https://www.youtube.com/embed/YUu6rRFquys" frameborder="0" allowfullscreen></iframe>
                         </div>
@@ -390,7 +401,7 @@
                         <ul class="list-inline social-buttons">
                             <li><a href="#"><i class="fa fa-twitter"></i></a>
                             </li>
-                            <li><a href="https://www.facebook.com/profile.php?id=100010737574979"><i class="fa fa-facebook"></i></a>
+                            <li><a target="_blank" href="https://www.facebook.com/profile.php?id=100010737574979"><i class="fa fa-facebook"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -401,9 +412,9 @@
                         <h4>Crimsen</h4>
                         <p class="">Lyricist</p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="https://twitter.com/CriM5eN?lang=en"><i class="fa fa-twitter"></i></a>
+                            <li><a target="_blank" href="https://twitter.com/CriM5eN?lang=en"><i class="fa fa-twitter"></i></a>
                             </li>
-                            <li><a href="https://www.facebook.com/curtis.clark.1447"><i class="fa fa-facebook"></i></a>
+                            <li><a target="_blank" href="https://www.facebook.com/curtis.clark.1447"><i class="fa fa-facebook"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -414,9 +425,9 @@
                         <h4>B-Rex</h4>
                         <p class="">Lyricist</p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            <li><a target="_blank" href="#"><i class="fa fa-twitter"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            <li><a target="_blank" href="#"><i class="fa fa-facebook"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -427,9 +438,9 @@
                         <h4>Question</h4>
                         <p class="">Lyricist</p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            <li><a target="_blank" href="#"><i class="fa fa-twitter"></i></a>
                             </li>
-                            <li><a href="https://www.facebook.com/ray.washington.313?fref=ts"><i class="fa fa-facebook"></i></a>
+                            <li><a target="_blank" href="https://www.facebook.com/ray.washington.313?fref=ts"><i class="fa fa-facebook"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -440,9 +451,9 @@
                         <h4>Just Say PLZ</h4>
                         <p class="">Producer</p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            <li><a target="_blank" href="#"><i class="fa fa-twitter"></i></a>
                             </li>
-                            <li><a href="https://www.facebook.com/justsayplz/"><i class="fa fa-facebook"></i></a>
+                            <li><a target="_blank" href="https://www.facebook.com/justsayplz/"><i class="fa fa-facebook"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -518,9 +529,9 @@
                     <br>
                     <h2 class="section-heading col-lg-12" style=" text-align:center; background-color:#111;">Featured On:</h2>
                     <br>
-                    <a class="featured col-md-4 col-sm-4 col-xs-12" href="http://www.ryandaylandscapes.com/post/68137593262/the-high-five-collective"><img style="margin:auto;padding:5px;" src="img/portfolio/flyers/logo.png" class="img-responsive" alt="Ryan Day Landscapes"></a>
-                    <a class="featured col-md-4 col-sm-4 col-xs-12" href="http://www.westword.com/music/high-five-hip-hop-collective-reaches-out-7367611"><img style="margin:auto;padding:5px;" src="img/portfolio/flyers/logo-150.png" class="img-responsive" alt="Westword"></a>
-                    <a class="featured col-md-4 col-sm-4 col-xs-12" href="http://secondstorygarage.com/flying-colorados-hip-hop-flag-at-south-by-southwest-sxsw/"><img style="margin:auto;padding:5px;" src="img/portfolio/flyers/SSG_275wide.jpg" class="img-responsive" alt="Second Story Garage"></a>
+                    <a class="featured col-md-4 col-sm-4 col-xs-12" target="_blank"  href="http://www.ryandaylandscapes.com/post/68137593262/the-high-five-collective"><img style="margin:auto;padding:5px;" src="img/portfolio/flyers/logo.png" class="img-responsive" alt="Ryan Day Landscapes"></a>
+                    <a class="featured col-md-4 col-sm-4 col-xs-12" target="_blank"  href="http://www.westword.com/music/high-five-hip-hop-collective-reaches-out-7367611"><img style="margin:auto;padding:5px;" src="img/portfolio/flyers/logo-150.png" class="img-responsive" alt="Westword"></a>
+                    <a class="featured col-md-4 col-sm-4 col-xs-12" target="_blank"  href="http://secondstorygarage.com/flying-colorados-hip-hop-flag-at-south-by-southwest-sxsw/"><img style="margin:auto;padding:5px;" src="img/portfolio/flyers/SSG_275wide.jpg" class="img-responsive" alt="Second Story Garage"></a>
                 </div>
                 
             </div>
@@ -535,19 +546,19 @@
                 </div>
                 <div class="col-md-4">
                     <ul class="list-inline social-buttons">
-                        <li><a href="https://twitter.com/highfivehiphop?lang=en"><i class="fa fa-twitter"></i></a>
+                        <li><a target="_blank" href="https://twitter.com/highfivehiphop?lang=en"><i class="fa fa-twitter"></i></a>
                         </li>
-                        <li><a href="https://www.facebook.com/highfivehiphop/"><i class="fa fa-facebook"></i></a>
+                        <li><a target="_blank" href="https://www.facebook.com/highfivehiphop/"><i class="fa fa-facebook"></i></a>
                         </li>
-                        <li><a href="https://www.instagram.com/highfivehiphop/"><i class="fa fa-instagram"></i></a>
+                        <li><a target="_blank" href="https://www.instagram.com/highfivehiphop/"><i class="fa fa-instagram"></i></a>
                         </li>
-                        <li><a href="http://highfivehiphop.tumblr.com/"><i class="fa fa-tumblr"></i></a>
+                        <li><a target="_blank" href="http://highfivehiphop.tumblr.com/"><i class="fa fa-tumblr"></i></a>
                         </li>
-                        <li><a href="https://www.youtube.com/user/highfivehiphop"><i class="fa fa-youtube"></i></a>
+                        <li><a target="_blank" href="https://www.youtube.com/user/highfivehiphop"><i class="fa fa-youtube"></i></a>
                         </li>
-                        <li><a href="https://vine.co/u/1087147050086309888"><i class="fa fa-vine"></i></a>
+                        <li><a target="_blank" href="https://vine.co/u/1087147050086309888"><i class="fa fa-vine"></i></a>
                         </li>
-                        <li><a href="https://soundcloud.com/highfivehiphop"><i class="fa fa-soundcloud"></i></a>
+                        <li><a target="_blank" href="https://soundcloud.com/highfivehiphop"><i class="fa fa-soundcloud"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -561,6 +572,7 @@
                 </div>
             </div>
         </div>
+        <a href="http://www.bfreshgear.com/"><img class="img-responsive shadow" style="margin:auto;" src="img/logos/bf-logo.png" /></a>
     </footer>
 
     <!-- jQuery -->
@@ -573,6 +585,7 @@
 
     <!-- Plugin JavaScript -->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
     <script src="/js/player.js"></script>
     <script async src="js/classie.js"></script>
     <script src="js/cbpAnimatedHeader.js"></script>
@@ -581,7 +594,8 @@
     <script src="js/jqBootstrapValidation.js"></script>
     <script src="js/contact_me.js"></script>
 
-
+    <script src="js/slickPhoto.js"></script>
+    
     <!-- Custom Theme JavaScript -->
     <!-- <script src="js/agency.js"></script>-->
     <script>
@@ -610,7 +624,7 @@
     <script> // Music player 
         $(document).ready(function() {
             $("#playListContainer").audioControls( {
-                autoPlay : false,
+                autoPlay : true,
                 timer: 'increment',
                 onAudioChange : function(response){
                     $('.songPlay').text(response.title + ' - '); //Song title information
